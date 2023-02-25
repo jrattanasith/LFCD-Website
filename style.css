@@ -1,0 +1,121 @@
+*{
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* LFCD_LOGO_(300dpi) 1 */
+#lfcd-logo{
+display: flex;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+  }
+
+nav ul li:hover > ul {
+    display: block;
+  }
+
+nav ul ul li {
+    width: 200px;
+    float: none;
+    position: relative;
+  }
+
+nav ul ul ul li {
+    position: static;
+  }
+
+
+  nav ul ul a {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul ul a:hover {
+    background-color: #555;
+  }
+  
+  nav li:hover > a {
+    background-color: #555;
+  }
+
+nav li {
+  margin: 0 10px;
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: white;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    /* CSS rules for mobile devices */
+    body {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+    }
+  
+    .menu {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .content {
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+    }
+  
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+    }
+  }
+
