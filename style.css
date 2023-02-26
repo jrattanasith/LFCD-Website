@@ -2,82 +2,113 @@
 font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Custom Properties */
+
+:root {
+  --ff-primary: Arial, sans-serif;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-bg: #fff;
+  --clr-light: #00a0d0;
+  --clr-dark: #303030;
+  --clr-accent: #09406a;
+ 
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: .25em 0.25em 0.75em rgba(0,0,0,.25),
+        0.125em 0.125 0.25em rgba(0,0,0,.15);
+}
+
 /* LFCD_LOGO_(300dpi) 1 */
 #lfcd-logo{
 display: flex;
+max-width: 250px;
 }
 
+/* Nav Bar */
 nav {
   background-color: #333;
-  color: white;
+  height: 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 0 20px;
 }
 
-nav ul {
-  list-style-type: none;
+.navbar {
+  list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
 }
 
-nav ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-  }
-
-nav ul li:hover > ul {
-    display: block;
-  }
-
-nav ul ul li {
-    width: 200px;
-    float: none;
-    position: relative;
-  }
-
-nav ul ul ul li {
-    position: static;
-  }
-
-
-  nav ul ul a {
-    padding: 10px 15px;
-    color: white;
-    text-decoration: none;
-  }
-  
-  nav ul ul a:hover {
-    background-color: #555;
-  }
-  
-  nav li:hover > a {
-    background-color: #555;
-  }
-
-nav li {
+.navbar li {
   margin: 0 10px;
-  position: relative;
 }
 
-nav a {
-  color: white;
+.navbar a {
+  color: #fff;
   text-decoration: none;
-  padding: 10px;
 }
 
-nav a:hover {
-  background-color: white;
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  padding: 1px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+nav ul ul a:hover {
+  background-color: #555;
+  list-style-type: none;
+}
+
+nav li:hover > a {
+  background-color: #555;
+  list-style-type: none;
+
+}
+
+nav li:hover a {
   color: black;
+  list-style-type: none;
 }
 
+ nav li.drop-element {
+  color: black;
+  list-style-type: none;
+ }
 
+ nav li.drop-element a:hover {
+  background-color: #555;
+  list-style-type: none;
+ }
 
-
+ .nav-toggle{
+  padding: .5em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 1000;
+}
 
 
 
@@ -86,36 +117,64 @@ nav a:hover {
 
 /* Media Queries */
 @media (max-width: 768px) {
-    /* CSS rules for mobile devices */
-    body {
-      font-size: 16px;
-      padding: 10px;
-    }
+  /* styles for mobile devices */
+  /* ... */
+}
   
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 5px;
-    }
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* styles for tablets */
+  /* ... */
+}
   
-    .menu {
-      display: block;
-      width: 100%;
-      text-align: center;
-    }
-  
-    .content {
-      width: 100%;
-      margin: 0;
-      padding: 10px;
-    }
-  
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 5px;
-    }
-  }
+@media (min-width: 1024px) {
+  /* styles for desktops */
+  /* ... */
+}
 
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    margin-left: auto; 
+  }
+  
+  .bar {
+    width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: transform 0.2s;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    display: none;
+    margin-top: 0;
+    padding: 0;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+  
+  .dropdown > a {
+    display: block;
+    padding: 10px;
+  }
+  
+  .show {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+  }
+}
