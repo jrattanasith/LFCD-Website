@@ -1,5 +1,5 @@
 
-// Slideshow Physics
+// Hamburger Physics
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const navbar = document.querySelector('.navbar');
 
@@ -18,6 +18,3 @@ function autoSlide() {
   slides[slideIndex].classList.add('active');
 }
 
-const slideshowContainer = document.querySelector('.slideshow-container');
-slideshowContainer.addEventListener('mouseenter', () => clearInterval(interval));
-slideshowContainer.addEventListener('mouseleave', () => interval = setInterval(autoSlide, 3000));

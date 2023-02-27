@@ -24,6 +24,40 @@ font-family: Arial, Helvetica, sans-serif;
         0.125em 0.125 0.25em rgba(0,0,0,.15);
 }
 
+/* Footer */
+
+footer{
+  text-align: center;
+background-color: var(--clr-light);
+}
+
+footer ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+footer a{
+cursor: pointer;
+margin: 10px;
+font-size: 50px;
+color: var(--clr-bg);
+}
+
+footer i{
+  padding-top: 15px;
+}
+
+footer i:hover{
+  opacity: 70%;
+}
+
+footer p {
+  text-align: center;
+  margin-left: 45px;
+  color: var(--clr-bg);
+}
+
 /* LFCD_LOGO_(300dpi) 1 */
 #lfcd-logo{
 display: flex;
@@ -136,6 +170,7 @@ nav li:hover a {
   height: 500px;
   width: 100%;
   overflow: hidden;
+  margin-top: 10px;
 }
 
 .slideshow-container img {
@@ -157,16 +192,34 @@ nav li:hover a {
 #banner{
   justify-content: center;
   text-align: center;
-}
-
-/*!! #message-container{
-
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #about{
   display: flex;
-  
-} !!*/
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#about h1 {
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.text {
+  display: flex;
+  float: left;
+  width: 50%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -229,5 +282,13 @@ nav li:hover a {
     padding: 20px;
     text-align: center;
     z-index: 1;
+  }
+
+  .text {
+    display: flex;
+    float: left;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 }
