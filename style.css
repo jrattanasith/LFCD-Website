@@ -114,7 +114,6 @@ nav {
 }
 
 
-
 .dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -168,7 +167,7 @@ nav li:hover a {
 /* Slideshow */
 .slideshow-container {
   position: relative;
-  height: 500px;
+  height: 750px;
   width: 100%;
   overflow: hidden;
   margin-top: 10px;
@@ -194,19 +193,28 @@ nav li:hover a {
   justify-content: center;
   text-align: center;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 #about{
   display: flex;
   flex-wrap: wrap;
-  padding-top: 20px;
+  padding-top: 15px;
   padding-bottom: 20px;
 }
 
 #about h1 {
   justify-content: center;
   text-align: center;
+}
+
+#about p {
+  text-align: center;
+}
+
+.ceo-pic {
+  float: right;
+  padding-right: 225px;
 }
 
 .container {
@@ -231,12 +239,83 @@ nav li:hover a {
 @media (min-width: 768px) and (max-width: 1024px) {
   /* styles for tablets */
   /* ... */
+
+  .navbar {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    margin-left: auto; 
+  }
+  
+  .bar {
+    width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: transform 0.2s;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    display: none;
+    margin-top: 0;
+    padding: 0;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+  
+  .dropdown > a {
+    display: block;
+    padding: 10px;
+  }
+  
+  .show {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .text {
+    display: flex;
+    float: left;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .slideshow-container{
+    display: flex;
+    float: left;
+    width: 100%;
+    height: 350px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .ceo-pic {
+    padding: 0%;
+    margin-right: 220px;
+}
+
 }
   
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
   /* styles for desktops */
   /* ... */
+  
 }
+
 
 @media (max-width: 768px) {
   .navbar {
@@ -292,4 +371,18 @@ nav li:hover a {
     padding: 0 20px;
     box-sizing: border-box;
   }
+
+  .slideshow-container{
+    display: flex;
+    float: left;
+    width: 100%;
+    height: 350px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .ceo-pic {
+  padding: 0%;
+  margin-right: 50px;
+}
 }
