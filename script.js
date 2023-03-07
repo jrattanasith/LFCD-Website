@@ -1,11 +1,6 @@
 
 // Hamburger Physics
-const hamburgerMenu = document.querySelector('.hamburger-menu');
-const navbar = document.querySelector('.navbar');
 
-hamburgerMenu.addEventListener('click', () => {
-  navbar.classList.toggle('show');
-});
 
 // Slideshow Timer
 let slideIndex = 0;
